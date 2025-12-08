@@ -23,7 +23,7 @@
       overlays = [inputs.gen-luarc.overlays.default];
     };
     luarc-json = pkgs'.mk-luarc-json {
-      # plugins = pkgs.callPackage ./nvim-plugins.nix {};
+      plugins = [];
       nvim = pkgs.neovim-unwrapped;
     };
   in ''
