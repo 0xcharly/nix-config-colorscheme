@@ -426,6 +426,8 @@ load_colorscheme {
 
   -- Lua
   ['@constructor.lua'] = { link = '@punctuation.bracket' }, -- For constructor calls and definitions: = { } in Lua.
+  ['@lsp.mod.defaultLibrary.lua'] = { link = 'function.builtin.lua' },
+  ['@lsp.typemod.function.defaultLibrary.lua'] = { link = 'function.builtin.lua' },
 
   -- Python
   ['@constructor.python'] = { fg = ${theme.text_sky} }, -- __init__(), __new__().
