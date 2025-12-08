@@ -16,10 +16,10 @@ with pkgs;
     );
 
     buildPhase = ''
-      mkdir -p $out/nvim/plugin
+      mkdir -p $out/plugin
     '';
 
     installPhase = ''
-      cp $colorscheme $out/nvim/plugin/init.lua
+      cp $colorscheme $out/plugin/init.lua
     '';
   }
