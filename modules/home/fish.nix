@@ -28,7 +28,7 @@ in {
     fish_color_user ${theme.text_teal}
     fish_color_host ${theme.text_sky}
     fish_color_host_remote ${theme.text_dim}
-    fish_color_status ${theme.red}
+    fish_color_status ${theme.text_red}
     fish_pager_color_progress ${theme.text_dimmer}
     fish_pager_color_prefix ${theme.text_pink}
     fish_pager_color_completion ${theme.text}
