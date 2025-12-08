@@ -20,6 +20,6 @@ with pkgs;
     '';
 
     installPhase = ''
-      cp $colorscheme $out/nvim/plugin/colorscheme.lua
+      cp $colorscheme $out/nvim/plugin/init.lua
     '';
   }
