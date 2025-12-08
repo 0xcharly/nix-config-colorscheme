@@ -76,22 +76,22 @@ with palette; rec {
   terminal_color_8 = text_dimmer;
 
   terminal_color_1 = tailwind.red-300;
-  terminal_color_9 = tailwind.red-200;
+  terminal_color_9 = tailwind.red-300;
 
   terminal_color_2 = tailwind.green-300;
-  terminal_color_10 = tailwind.green-200;
+  terminal_color_10 = tailwind.green-300;
 
   terminal_color_3 = tailwind.amber-300;
-  terminal_color_11 = tailwind.amber-200;
+  terminal_color_11 = tailwind.amber-300;
 
   terminal_color_4 = tailwind.blue-300;
-  terminal_color_12 = tailwind.blue-200;
+  terminal_color_12 = tailwind.blue-300;
 
   terminal_color_13 = tailwind.sky-300;
-  terminal_color_5 = tailwind.sky-200;
+  terminal_color_5 = tailwind.sky-300;
 
   terminal_color_6 = tailwind.violet-300;
-  terminal_color_14 = tailwind.violet-200;
+  terminal_color_14 = tailwind.violet-300;
 
   terminal_color_7 = text;
   terminal_color_15 = text_dim;
