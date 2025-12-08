@@ -90,8 +90,8 @@ with palette; rec {
   terminal_color_13 = text_sky;
   terminal_color_5 = text_sky;
 
-  terminal_color_6 = text_purple;
-  terminal_color_14 = text_purple;
+  terminal_color_6 = tailwind.violet-300;
+  terminal_color_14 = tailwind.violet-300;
 
   terminal_color_7 = text;
   terminal_color_15 = text_dim;
