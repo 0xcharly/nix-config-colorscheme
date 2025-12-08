@@ -87,9 +87,9 @@ load_colorscheme {
   ComplHintMore = { link = 'Question' }, -- The additional information of the virtual text.
   Question = { fg = ${theme.text_blue} }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-  Search = { fg = ${theme.on_surface_amber}, bg = ${theme.surface_amber} }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-  IncSearch = { fg = ${theme.on_surface_amber}, bg = ${theme.surface_amber} }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-  CurSearch = { fg = ${theme.on_surface_amber}, bg = ${theme.surface_amber}, standout = true }, -- 'cursearch' highlighting: highlights the current search you're on differently
+  Search = { fg = ${theme.on_surface_search}, bg = ${theme.surface_search} }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+  IncSearch = { link = 'Search' }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+  CurSearch = { fg = ${theme.on_surface_search}, bg = ${theme.surface_search}, standout = true }, -- 'cursearch' highlighting: highlights the current search you're on differently
   SpecialKey = { link = 'NonText' }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
   SpellBad = { sp = ${theme.text_red}, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
   SpellCap = { sp = ${theme.text_yellow}, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -117,7 +117,7 @@ load_colorscheme {
 
   Punctuation = { fg = ${theme.text_dimmer} },
 
-  Comment = { fg = ${theme.text_variant_dimmer} },
+  Comment = { fg = ${theme.text_comment} },
   SpecialComment = { link = 'Special' }, -- special things inside a comment
   Constant = { fg = ${theme.text_orange} }, -- (preferred) any constant
   String = { fg = ${theme.text_green} }, -- a string constant: "this is a string"

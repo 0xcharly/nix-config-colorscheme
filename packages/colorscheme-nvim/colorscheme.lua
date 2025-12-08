@@ -296,6 +296,7 @@ T = {
   text_title = P['slate-100'],
   text_link = P['blue-300'],
   text_function = P['blue-300'],
+  text_comment = P['gray-500'],
 
   text_ok = P['green-200'],
   text_error = P['red-200'],
@@ -317,6 +318,10 @@ T = {
 
   surface_visual = P['blue-800'],
   on_surface_visual = P['blue-50'],
+
+  -- Same as `surface_amber`/`on_surface_amber`
+  surface_search = 0x343121, -- surface + amber-300/15
+  on_surface_search = P['amber-100'],
 
   surface_red = 0x352932, -- surface + red-300/15
   on_surface_red = P['red-200'],
@@ -415,9 +420,9 @@ generate_colorscheme {
   ComplHintMore = { link = 'Question' }, -- The additional information of the virtual text.
   Question = { fg = T.text_blue }, -- |hit-enter| prompt and yes/no questions
   QuickFixLine = { bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-  Search = { fg = T.on_surface_amber, bg = T.surface_amber }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-  IncSearch = { fg = T.on_surface_amber, bg = T.surface_amber }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-  CurSearch = { fg = T.on_surface_amber, bg = T.surface_amber, standout = true }, -- 'cursearch' highlighting: highlights the current search you're on differently
+  Search = { fg = T.on_surface_search, bg = T.surface_search }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+  IncSearch = { link = 'Search' }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+  CurSearch = { fg = T.on_surface_search, bg = T.surface_search, standout = true }, -- 'cursearch' highlighting: highlights the current search you're on differently
   SpecialKey = { link = 'NonText' }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
   SpellBad = { sp = T.text_red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
   SpellCap = { sp = T.text_yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -445,7 +450,7 @@ generate_colorscheme {
 
   Punctuation = { fg = T.text_dimmer },
 
-  Comment = { fg = T.text_variant_dimmer },
+  Comment = { fg = T.text_comment },
   SpecialComment = { link = 'Special' }, -- special things inside a comment
   Constant = { fg = T.text_orange }, -- (preferred) any constant
   String = { fg = T.text_green }, -- a string constant: "this is a string"

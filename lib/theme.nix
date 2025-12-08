@@ -33,6 +33,7 @@ with palette; rec {
   text_title = tailwind.slate-100;
   text_link = tailwind.blue-300;
   text_function = tailwind.blue-300;
+  text_comment = text_variant_dimmer;
 
   text_ok = tailwind.green-200;
   text_error = tailwind.red-200;
@@ -54,6 +55,9 @@ with palette; rec {
 
   surface_visual = tailwind.blue-800;
   on_surface_visual = tailwind.blue-50;
+
+  surface_search = blends.surface_amber;
+  on_surface_search = tailwind.amber-100;
 
   surface_red = blends.surface_red;
   on_surface_red = tailwind.red-200;
