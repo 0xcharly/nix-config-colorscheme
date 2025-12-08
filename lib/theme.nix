@@ -81,8 +81,8 @@ with palette; rec {
   terminal_color_2 = tailwind.green-300;
   terminal_color_10 = tailwind.green-300;
 
-  terminal_color_3 = tailwind.amber-300;
-  terminal_color_11 = tailwind.amber-300;
+  terminal_color_3 = tailwind.amber-100;
+  terminal_color_11 = tailwind.amber-100;
 
   terminal_color_4 = tailwind.blue-300;
   terminal_color_12 = tailwind.blue-300;
