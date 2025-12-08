@@ -754,8 +754,6 @@ generate_colorscheme {
 
   -- Lua
   ['@constructor.lua'] = { link = '@punctuation.bracket' }, -- For constructor calls and definitions: = { } in Lua.
-  ['@lsp.mod.defaultLibrary.lua'] = { link = 'function.builtin.lua' },
-  ['@lsp.typemod.function.defaultLibrary.lua'] = { link = 'function.builtin.lua' },
 
   -- Python
   ['@constructor.python'] = { fg = T.text_sky }, -- __init__(), __new__().
@@ -769,6 +767,15 @@ generate_colorscheme {
 
   -- gitignore
   ['@string.special.path.gitignore'] = { fg = T.text },
+
+  -- }}}
+  -- LSP semantic tokens {{{
+
+  ['@lsp.type.property'] = { link = '@variable.member' },
+
+  -- Lua
+  ['@lsp.mod.defaultLibrary.lua'] = { link = '@function.builtin.lua' },
+  ['@lsp.typemod.function.defaultLibrary.lua'] = { link = '@function.builtin.lua' },
 
   -- }}}
   -- }}}
