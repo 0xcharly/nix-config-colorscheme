@@ -75,23 +75,23 @@ with palette; rec {
   terminal_color_0 = surface;
   terminal_color_8 = text_dimmer;
 
-  terminal_color_1 = tailwind.red-300;
-  terminal_color_9 = tailwind.red-300;
+  terminal_color_1 = text_red;
+  terminal_color_9 = text_red;
 
-  terminal_color_2 = tailwind.green-300;
-  terminal_color_10 = tailwind.green-300;
+  terminal_color_2 = text_green;
+  terminal_color_10 = text_green;
 
-  terminal_color_3 = tailwind.amber-100;
-  terminal_color_11 = tailwind.amber-100;
+  terminal_color_3 = text_amber;
+  terminal_color_11 = text_amber;
 
-  terminal_color_4 = tailwind.blue-300;
-  terminal_color_12 = tailwind.blue-300;
+  terminal_color_4 = text_blue;
+  terminal_color_12 = text_blue;
 
-  terminal_color_13 = tailwind.sky-300;
-  terminal_color_5 = tailwind.sky-300;
+  terminal_color_13 = text_sky;
+  terminal_color_5 = text_sky;
 
-  terminal_color_6 = tailwind.violet-300;
-  terminal_color_14 = tailwind.violet-300;
+  terminal_color_6 = text_violet;
+  terminal_color_14 = text_violet;
 
   terminal_color_7 = text;
   terminal_color_15 = text_dim;
