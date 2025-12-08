@@ -771,8 +771,6 @@ generate_colorscheme {
   -- }}}
   -- LSP semantic tokens {{{
 
-  ['@lsp.type.property'] = { link = '@variable.member' },
-
   -- Lua
   ['@lsp.mod.defaultLibrary.lua'] = { link = '@function.builtin.lua' },
   ['@lsp.typemod.function.defaultLibrary.lua'] = { link = '@function.builtin.lua' },
