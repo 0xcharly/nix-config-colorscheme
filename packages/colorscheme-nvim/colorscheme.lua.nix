@@ -424,6 +424,9 @@ load_colorscheme {
   ['@string.plain.css'] = { fg = ${theme.text} },
   ['@keyword.directive.css'] = { link = 'Keyword' }, -- CSS at-rules: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule.
 
+  -- Beancount
+  ['@type.beancount'] = { link = 'Normal' }, -- Beancount's accounts.
+
   -- Lua
   ['@constructor.lua'] = { link = '@punctuation.bracket' }, -- For constructor calls and definitions: = { } in Lua.
 
