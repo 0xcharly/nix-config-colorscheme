@@ -4,6 +4,6 @@
 in {
   programs.bat = {
     config.theme = theme_name;
-    themes.${theme_name} = builtins.readFile ./pixel.tmTheme;
+    themes.${theme_name}.src = ./pixel.tmTheme;
   };
 }
