@@ -1,5 +1,5 @@
 {flake, ...}: {lib, ...}: let
-  theme = flake.lib.colorscheme.noPrefix;
+  theme = flake.lib.colorscheme.asHexStrings;
 in {
   programs.tmux.extraConfig = lib.mkBefore ''
     set -ogq @text "${theme.text}"
