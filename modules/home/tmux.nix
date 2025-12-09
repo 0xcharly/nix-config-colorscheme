@@ -7,6 +7,6 @@ in {
     set -ogq @text_violet "${theme.text_violet}"
     set -ogq @surface "${theme.surface}"
     set -ogq @surface_cursorline "${theme.surface_cursorline}"
-    set -ogq @surface_menu "${theme.surface_menu}"
+    set -ogq @surface_menu_cursorline "${theme.surface_menu_cursorline}"
   '';
 }
