@@ -1,5 +1,5 @@
 {flake, ...}: let
-  theme = flake.lib.colorscheme.asHexStrings;
+  theme = flake.lib.colorscheme.asRgbLiterals;
 in {
   wayland.windowManager.hyprland = {
     settings = {
