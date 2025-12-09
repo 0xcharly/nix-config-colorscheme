@@ -1,9 +1,9 @@
-{flake, ...}: let
+{flake, ...}: {pkgs, ...}: let
   theme_name = "pixel";
   theme = flake.lib.colorscheme.asHexStrings;
 in {
   programs.atuin.settings.theme.name = theme_name;
-  xdg.configFile."atuin/themes/${theme_name}.toml".text = builtins.toTOML {
+  xdg.configFile."atuin/themes/${theme_name}.toml".text = pkgs.format.toml {
     theme.name = theme_name;
     colors = {
       AlertError = theme.text_error;
