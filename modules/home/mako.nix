@@ -1,5 +1,5 @@
 {flake, ...}: let
-  theme = flake.lib.colorscheme.hasHexStrings;
+  theme = flake.lib.colorscheme.asHexStrings;
 in {
   config.services.mako.settings = {
     background-color = theme.surface;

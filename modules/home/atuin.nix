@@ -1,6 +1,6 @@
 {flake, ...}: let
   theme_name = "pixel";
-  theme = flake.lib.colorscheme.hasHexStrings;
+  theme = flake.lib.colorscheme.asHexStrings;
 in {
   programs.atuin.settings.theme.name = theme_name;
   xdg.configFile."atuin/themes/${theme_name}.toml".text = builtins.toTOML {

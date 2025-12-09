@@ -1,5 +1,5 @@
 {flake, ...}: let
-  theme = flake.lib.colorscheme.hasHexStrings;
+  theme = flake.lib.colorscheme.asHexStrings;
 in {
   programs.fzf.colors = {
     "bg+" = theme.surface_cursorline;
