@@ -3,7 +3,7 @@
   theme = flake.lib.colorscheme.asHexStrings;
 in {
   programs.atuin.settings.theme.name = theme_name;
-  xdg.configFile."atuin/themes/${theme_name}.toml".text = pkgs.formats.toml {
+  xdg.configFile."atuin/themes/${theme_name}.toml".source = (pkgs.formats.toml {}).generate {
     theme.name = theme_name;
     colors = {
       AlertError = theme.text_error;
