@@ -2,7 +2,7 @@
   theme = flake.lib.colorscheme.hasHexStrings;
 in {
   programs.fzf.colors = {
-    "bg+" = theme.surface_variant;
+    "bg+" = theme.surface_cursorline;
     "fg+" = theme.text_title;
     "hl+" = theme.text_sky;
     bg = theme.surface;
