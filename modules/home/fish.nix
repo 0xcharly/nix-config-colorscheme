@@ -22,7 +22,7 @@ in {
     fish_color_option ${theme.text_green}
     fish_color_operator ${theme.text_dimmer}
     fish_color_escape ${theme.text_pink}
-    fish_color_autosuggestion ${theme.text_dimmer}
+    fish_color_autosuggestion ${theme.text_variant_dimmer}
     fish_color_cancel ${theme.text_red}
     fish_color_cwd ${theme.text_amber}
     fish_color_user ${theme.text_teal}
