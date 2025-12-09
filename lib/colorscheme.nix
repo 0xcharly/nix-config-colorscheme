@@ -4,6 +4,6 @@ lib: oklch: rgb: theme: let
 in {
   asHexLiterals = mapHexAttrs (value: "0x${value}") theme;
   asHexStrings = mapHexAttrs (value: "#${value}") theme;
-  asRgbliterals = mapHexAttrs (value: "rgb(${value})") theme;
+  asRgbLiterals = mapHexAttrs (value: "rgb(${value})") theme;
   noPrefix = mapHexAttrs (value: value) theme;
 }
