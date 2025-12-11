@@ -851,7 +851,7 @@ generate_colorscheme {
   RenderMarkdownH5 = { link = 'markdownH5' },
   RenderMarkdownH6 = { link = 'markdownH6' },
   RenderMarkdownCode = { bg = T.surface_dark },
-  RenderMarkdownCodeInline = { bg = T.text },
+  RenderMarkdownCodeInline = { bg = T.surface_dark },
   RenderMarkdownBullet = { fg = T.text_sky },
   RenderMarkdownTableHead = { fg = T.text_blue },
   RenderMarkdownTableRow = { fg = T.text_indigo },

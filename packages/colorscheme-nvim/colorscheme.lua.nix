@@ -518,7 +518,7 @@ load_colorscheme {
   RenderMarkdownH5 = { link = 'markdownH5' },
   RenderMarkdownH6 = { link = 'markdownH6' },
   RenderMarkdownCode = { bg = ${theme.surface_dark} },
-  RenderMarkdownCodeInline = { bg = ${theme.text} },
+  RenderMarkdownCodeInline = { bg = ${theme.surface_dark} },
   RenderMarkdownBullet = { fg = ${theme.text_sky} },
   RenderMarkdownTableHead = { fg = ${theme.text_blue} },
   RenderMarkdownTableRow = { fg = ${theme.text_indigo} },
