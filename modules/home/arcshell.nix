@@ -2,7 +2,7 @@
   theme = flake.lib.colorscheme.asHexStrings;
 in {
   programs.arcshell.settings.palette = {
-    text = theme.text;
+    text = theme.text_dimmer;
     surface = theme.surface;
     inner_border = theme.borders_desktop_shell;
     inner_border_shadow = theme.shadows_desktop_shell;
