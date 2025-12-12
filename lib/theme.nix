@@ -47,6 +47,14 @@ with palette; rec {
   accent_darkest = tailwind.sky-500;
 
   borders = tailwind.slate-500;
+  borders_active = tailwind.amber-600;
+  borders_inactive = tailwind.sky-400;
+  borders_urgent = tailwind.red-500;
+
+  shadows = tailwind.slate-950;
+  shadows_active = tailwind.amber-700;
+  shadows_inactive = tailwind.blue-600;
+  shadows_urgent = tailwind.red-700;
 
   surface_dark = tailwind.gray-950;
   surface = blends.surface;
