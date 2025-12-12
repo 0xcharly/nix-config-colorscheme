@@ -41,6 +41,11 @@ with palette; rec {
   text_info = tailwind.blue-300;
   text_hint = tailwind.indigo-300;
 
+  accent = tailwind.violet-200;
+  accent_dark = tailwind.violet-300;
+  accent_darker = tailwind.violet-400;
+  accent_darkest = tailwind.violet-500;
+
   borders = tailwind.slate-500;
 
   surface_dark = tailwind.gray-950;
@@ -74,8 +79,6 @@ with palette; rec {
   surface_violet = blends.surface_violet;
   on_surface_violet = tailwind.violet-200;
 
-  UNUSED = others.magenta;
-
   terminal_color_0 = surface;
   terminal_color_8 = text_dimmer;
 
@@ -99,4 +102,6 @@ with palette; rec {
 
   terminal_color_7 = text;
   terminal_color_15 = text_dim;
+
+  UNUSED = others.magenta;
 }
