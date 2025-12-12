@@ -50,11 +50,13 @@ with palette; rec {
   borders_active = tailwind.amber-400;
   borders_inactive = tailwind.sky-400;
   borders_urgent = tailwind.red-400;
+  borders_desktop_shell = tailwind.violet-400;
 
   shadows = tailwind.slate-950;
   shadows_active = tailwind.amber-600;
   shadows_inactive = tailwind.blue-600;
   shadows_urgent = tailwind.red-600;
+  shadows_desktop_shell = tailwind.violet-600;
 
   surface_dark = tailwind.gray-950;
   surface = blends.surface;
