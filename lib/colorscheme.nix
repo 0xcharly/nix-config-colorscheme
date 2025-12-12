@@ -1,9 +1,9 @@
 lib: oklch: rgb: theme: let
-  mapHexAttrs = fn:
-    lib.attrsets.mapAttrs (_: value: fn (rgb.toHex (oklch.convertToRgb value)));
+  mapThemeHexAttrs = fn:
+    lib.attrsets.mapAttrs (_: value: value |> oklch.convertToRgb |> rgb.toHex |> fn) theme;
 in {
-  asHexLiterals = mapHexAttrs (value: "0x${value}") theme;
-  asHexStrings = mapHexAttrs (value: "#${value}") theme;
-  asRgbLiterals = mapHexAttrs (value: "rgb(${value})") theme;
-  noPrefix = mapHexAttrs (value: value) theme;
+  asHexLiterals = mapThemeHexAttrs (value: "0x${value}");
+  asHexStrings = mapThemeHexAttrs (value: "#${value}");
+  asRgbLiterals = mapThemeHexAttrs (value: "rgb(${value})");
+  noPrefix = mapThemeHexAttrs (value: value);
 }
