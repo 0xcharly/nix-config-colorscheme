@@ -7,7 +7,7 @@ in {
     set -ogq @surface "${theme.surface}"
     set -ogq @surface_statusline "${theme.surface_cursorline}"
     set -ogq @indicator_current "${theme.accent_darkest}"
-    set -ogq @indicator_last "${theme.text_dimmer}"
-    set -ogq @indicator_inactive "${theme.text_dimmest}"
+    set -ogq @indicator_last "${theme.text_variant_conceal}"
+    set -ogq @indicator_inactive "${theme.surface_cursorline}"
   '';
 }

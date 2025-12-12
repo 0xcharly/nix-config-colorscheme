@@ -41,10 +41,10 @@ with palette; rec {
   text_info = tailwind.blue-300;
   text_hint = tailwind.indigo-300;
 
-  accent = tailwind.violet-200;
-  accent_dark = tailwind.violet-300;
-  accent_darker = tailwind.violet-400;
-  accent_darkest = tailwind.violet-500;
+  accent = tailwind.blue-200;
+  accent_dark = tailwind.blue-300;
+  accent_darker = tailwind.blue-400;
+  accent_darkest = tailwind.blue-500;
 
   borders = tailwind.slate-500;
 
