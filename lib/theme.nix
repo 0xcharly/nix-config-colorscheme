@@ -49,14 +49,21 @@ with palette; rec {
   borders = tailwind.slate-500;
   borders_active = tailwind.amber-400;
   borders_inactive = tailwind.sky-400;
+  borders_focused_inactive = tailwind.violet-400;
   borders_urgent = tailwind.red-400;
   borders_desktop_shell = tailwind.violet-400;
 
   shadows = tailwind.slate-950;
   shadows_active = tailwind.amber-600;
   shadows_inactive = tailwind.blue-600;
+  shadows_focused_inactive = tailwind.violet-600;
   shadows_urgent = tailwind.red-600;
   shadows_desktop_shell = tailwind.violet-600;
+
+  surface_active = blends.surface_amber;
+  surface_inactive = blends.surface_blue;
+  surface_focused_inactive = blends.surface_violet;
+  surface_urgent = blends.surface_red;
 
   surface_dark = tailwind.gray-950;
   surface = blends.surface;

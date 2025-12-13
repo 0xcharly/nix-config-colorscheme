@@ -13,9 +13,14 @@ in {
       };
       misc.background_color = theme.surface_dark;
       plugin.hy3.tabs = {
-        "col.active" = theme.borders_active;
-        "col.inactive" = theme.borders_inactive;
-        "col.urgent" = theme.borders_urgent;
+        "col.active" = theme.surface_active;
+        "col.inactive" = theme.surface_inactive;
+        "col.focused" = theme.surface_focused_inactive;
+        "col.urgent" = theme.surface_urgent;
+        "col.active.border" = theme.borders_active;
+        "col.inactive.border" = theme.borders_inactive;
+        "col.focused.border" = theme.borders_focused_inactive;
+        "col.urgent.border" = theme.borders_urgent;
       };
     };
   };
