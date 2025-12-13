@@ -60,10 +60,10 @@ with palette; rec {
   shadows_urgent = tailwind.red-600;
   shadows_desktop_shell = tailwind.violet-600;
 
-  surface_active = blends.surface_amber;
-  surface_inactive = blends.surface_blue;
-  surface_focused_inactive = blends.surface_violet;
-  surface_urgent = blends.surface_red;
+  surface_active = tailwind.yellow-950;
+  surface_inactive = tailwind.blue-950;
+  surface_focused_inactive = tailwind.indigo-950;
+  surface_urgent = tailwind.red-950;
 
   surface_dark = tailwind.gray-950;
   surface = blends.surface;
