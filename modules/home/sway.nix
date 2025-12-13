@@ -10,10 +10,10 @@ in {
         childBorder = theme.borders_active;
       };
       focusedInactive = {
-        border = theme.borders_inactive;
-        text = theme.borders_inactive;
-        indicator = theme.borders_inactive;
-        childBorder = theme.borders_inactive;
+        border = theme.borders_focused_inactive;
+        text = theme.borders_focused_inactive;
+        indicator = theme.borders_focused_inactive;
+        childBorder = theme.borders_focused_inactive;
       };
       unfocused = {
         border = theme.borders_inactive;
