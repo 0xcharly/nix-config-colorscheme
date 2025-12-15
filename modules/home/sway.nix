@@ -34,9 +34,9 @@ in {
         childBorder = theme.borders;
       };
     };
+    extraConfig = ''
+      shadow_color ${theme.shadows_active}
+      shadow_inactive_color ${theme.shadows_inactive}
+    '';
   };
-  extraConfig = ''
-    shadow_color ${theme.shadows_active}
-    shadow_inactive_color ${theme.shadows_inactive}
-  '';
 }
