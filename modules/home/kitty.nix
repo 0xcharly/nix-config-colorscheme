@@ -7,7 +7,7 @@
 in {
   programs.kitty.extraConfig = let
     themeFile =
-      pkgs.writeTextFile "pixel.conf" ''
+      pkgs.writeText "pixel.conf" ''
         background ${theme.surface}
         foreground ${theme.text}
         selection_background ${theme.surface_visual}
