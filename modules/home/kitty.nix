@@ -1,8 +1,8 @@
 {flake, ...}: {lib, ...}: let
-  theme_name = "pixel";
+  themeFile = "pixel";
   theme = flake.lib.colorscheme.asHexStrings;
 in {
-  xdg.configFile."kitty/themes/${theme_name}.conf".text =
+  xdg.configFile."kitty/themes/${themeFile}.conf".text =
     ''
       background ${theme.surface}
       foreground ${theme.text}
@@ -20,5 +20,5 @@ in {
       index: "color${toString index} ${theme."terminal_color_${toString index}"}"
     ) (lib.lists.range 0 15));
 
-  programs.kitty.themeFile = "${theme_name}.conf";
+  programs.kitty = {inherit themeFile;};
 }
