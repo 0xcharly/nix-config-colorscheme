@@ -17,10 +17,6 @@ in {
         cursor_text_color ${theme.surface}
         url_color ${theme.text_link}
 
-        # OS Window titlebar colors
-        wayland_titlebar_color system
-        macos_titlebar_color system
-
         # 16 terminal colors
       ''
       + lib.concatStringsSep "\n" (builtins.map (
