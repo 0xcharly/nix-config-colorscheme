@@ -1,3 +1,6 @@
+# Theme inspired from https://github.com/catppuccin/atuin
+# MIT License: Copyright (c) 2021 Catppuccin
+
 {flake, ...}: {pkgs, ...}: let
   theme_name = "pixel";
   theme = flake.lib.colorscheme.asHexStrings;

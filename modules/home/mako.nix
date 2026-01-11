@@ -1,3 +1,6 @@
+# Theme inspired from https://github.com/catppuccin/mako
+# MIT License: Copyright (c) 2021 Catppuccin
+
 {flake, ...}: let
   theme = flake.lib.colorscheme.asHexStrings;
 in {

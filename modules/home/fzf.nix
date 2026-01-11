@@ -1,3 +1,6 @@
+# Theme inspired from https://github.com/catppuccin/fzf
+# MIT License: Copyright (c) 2022 Catppuccin
+
 {flake, ...}: let
   theme = flake.lib.colorscheme.asHexStrings;
 in {

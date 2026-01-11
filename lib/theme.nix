@@ -1,3 +1,6 @@
+# Palette inspired by https://github.com/catppuccin/catppuccin
+# MIT License: Copyright (c) 2021 Catppuccin
+
 palette:
 with palette; rec {
   text = tailwind.slate-300;

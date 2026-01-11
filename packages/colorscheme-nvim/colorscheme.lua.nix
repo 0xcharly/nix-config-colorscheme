@@ -1,3 +1,6 @@
+# Colorscheme inspired from https://github.com/catppuccin/nvim
+# MIT License: Copyright (c) 2021 Catppuccin
+
 theme: ''
 -- Terminal groups {{{
 

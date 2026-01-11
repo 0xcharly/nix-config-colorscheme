@@ -1,3 +1,6 @@
+# Implementation inspired from https://github.com/Evercoder/culori
+# MIT License: Copyright (c) 2018 Dan Burzo
+
 lib: math: let
   linearInterpolator = {
     r ? 0,

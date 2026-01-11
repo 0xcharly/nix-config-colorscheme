@@ -1,3 +1,6 @@
+# From https://tailwindcss.com/docs/colors.
+# MIT License: Copyright (c) Tailwind Labs, Inc.
+
 let
   _ = l: c: h: {inherit l c h;};
 in {
