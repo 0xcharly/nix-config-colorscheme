@@ -4,6 +4,6 @@ in {
   services.walker.theme = {
     name = "pixel";
     layout = builtins.fromTOML (builtins.readFile ./walker-layout.toml);
-    style = import ./walker-style.css theme;
+    style = import ./walker-style.css.nix theme;
   };
 }
