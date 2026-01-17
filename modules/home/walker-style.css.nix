@@ -24,13 +24,13 @@ theme: ''
 
   #cfgerr {
     background: ${theme.surface_red};
-    color: ${theme.on_surface_red};
+    color: ${theme.text_red};
     margin-top: 20px;
     padding: 8px;
   }
 
   #window {
-    color: ${theme.on_surface};
+    color: ${theme.text};
   }
 
   #box {
@@ -41,7 +41,7 @@ theme: ''
   }
 
   #search {
-    color: ${theme.on_surface_blue};
+    color: ${theme.text_blue};
     background: ${theme.surface_blue};
     border: 1px solid lighter(${theme.surface_blue});
     padding: 16px 8px;
@@ -51,12 +51,12 @@ theme: ''
   #prompt {
     margin-left: 4px;
     margin-right: 12px;
-    color: ${theme.on_surface};
+    color: ${theme.text};
     font-size: 1.2em;
   }
 
   #clear {
-    color: ${theme.on_surface};
+    color: ${theme.text};
     margin-right: 8px;
   }
 
@@ -78,7 +78,7 @@ theme: ''
   }
 
   #typeahead {
-    color: ${theme.on_surface};
+    color: ${theme.text};
     opacity: 0.8;
   }
 
@@ -96,7 +96,7 @@ theme: ''
 
   child:selected,
   child:hover {
-    color: ${theme.on_surface_purple};
+    color: ${theme.text_purple};
     background: ${theme.surface_purple};
   }
 
@@ -116,14 +116,14 @@ theme: ''
   }
 
   #sub {
-    color: ${theme.on_surface};
+    color: ${theme.text};
     opacity: 0.8;
     font-weight: 400;
     font-size: 0.8em;
   }
 
   #activationlabel {
-    color: ${theme.on_surface};
+    color: ${theme.text};
     opacity: 0.6;
   }
 
@@ -131,7 +131,7 @@ theme: ''
   child:selected #sub,
   child:hover #activationlabel,
   child:hover #sub {
-    color: ${theme.on_surface_purple};
+    color: ${theme.text_purple};
   }
 
   #bar {
@@ -152,7 +152,7 @@ theme: ''
   .aiItem {
     padding: 10px;
     border-radius: 2px;
-    color: ${theme.on_surface};
+    color: ${theme.text};
     background: ${theme.surface};
   }
 
