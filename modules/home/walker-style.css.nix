@@ -24,7 +24,7 @@ theme: ''
 
   #cfgerr {
     background: ${theme.surface_red};
-    color: ${theme.text_red};
+    color: ${theme.on_surface_red};
     margin-top: 20px;
     padding: 8px;
   }
@@ -41,7 +41,7 @@ theme: ''
   }
 
   #search {
-    color: ${theme.text_blue};
+    color: ${theme.on_surface_blue};
     background: ${theme.surface_blue};
     border: 1px solid lighter(${theme.surface_blue});
     padding: 16px 8px;
@@ -96,8 +96,8 @@ theme: ''
 
   child:selected,
   child:hover {
-    color: ${theme.text_purple};
-    background: ${theme.surface_purple};
+    color: ${theme.on_surface_violet};
+    background: ${theme.surface_violet};
   }
 
   #item {
@@ -131,7 +131,7 @@ theme: ''
   child:selected #sub,
   child:hover #activationlabel,
   child:hover #sub {
-    color: ${theme.text_purple};
+    color: ${theme.on_surface_violet};
   }
 
   #bar {
