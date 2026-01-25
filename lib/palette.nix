@@ -251,12 +251,7 @@ in {
 
   # Blends calculated via browser compositing (as opposed to uniform interpolation).
   blends = {
-    surface = _ 0.1921 0.0213 267.51; # gray-950 + white/5 = #10141E
-    surface_lighter = _ 0.2435 0.0182 266.22; # surface0 + white/5 = #1C2029
-    surface_lightest = _ 0.2899 0.017 270.77; # surface1 + white/5 = #282B34
-
-    surface_variant = _ 0.1923 0.035 272.67; # slate-950 + white/5 = #0F1324
-    surface_variant_lighter = _ 0.2432 0.0312 273.09; # surface_variant0 + white/5 = #1B1F2F
+    surface_lighter = _ 0.1822 0 0; # neutral-950 + white/5 = #121212
 
     surface_amber = _ 0.3114 0.0272 98.78; # surface + amber-300/15 = #343121
     surface_blue = _ 0.3027 0.0367 258.31; # surface + blue-300/15 = #232F41

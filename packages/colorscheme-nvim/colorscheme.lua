@@ -306,15 +306,15 @@ T = {
 
   borders = P['slate-500'],
 
-  surface_dark = P['gray-950'],
-  surface = 0x10141E, -- gray-950 + white/5
-  surface_cursorline = 0x1C2029, -- surface + white/5
-  surface_statusline = 0x1C2029, -- surface + white/5
-  surface_menu = 0x1C2029, -- surface + white/5
-  surface_menu_cursorline = 0x282B34, -- surface_menu + white/5
+  surface_dark = P['neutral-950'],
+  surface = P['neutral-900'],
+  surface_cursorline = P['neutral-800'],
+  surface_statusline = 0x121212,
+  surface_menu = P['stone-900'],
+  surface_menu_cursorline = P['stone-800'],
 
-  surface_scrollbar = 0x0F1324, -- slate-950 + white/5
-  surface_scrollbar_thumb = 0x1B1F2F, -- surface_scrollbar + white/5
+  surface_scrollbar = 0x121212,
+  surface_scrollbar_thumb = P['neutral-800'],
 
   surface_visual = P['blue-800'],
   on_surface_visual = P['blue-50'],

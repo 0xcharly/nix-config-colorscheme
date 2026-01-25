@@ -68,15 +68,15 @@ with palette; rec {
   surface_focused_inactive = tailwind.violet-900;
   surface_urgent = tailwind.red-900;
 
-  surface_dark = tailwind.gray-950;
-  surface = blends.surface;
-  surface_cursorline = blends.surface_lighter;
+  surface_dark = tailwind.neutral-950;
+  surface = tailwind.neutral-900;
+  surface_cursorline = tailwind.neutral-800;
   surface_statusline = blends.surface_lighter;
-  surface_menu = blends.surface_lighter;
-  surface_menu_cursorline = blends.surface_lightest;
+  surface_menu = tailwind.stone-900;
+  surface_menu_cursorline = tailwind.stone-800;
 
-  surface_scrollbar = blends.surface_variant;
-  surface_scrollbar_thumb = blends.surface_variant_lighter;
+  surface_scrollbar = blends.surface_lighter;
+  surface_scrollbar_thumb = tailwind.neutral-800;
 
   surface_visual = tailwind.blue-800;
   on_surface_visual = tailwind.blue-50;
