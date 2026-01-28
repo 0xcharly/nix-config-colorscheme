@@ -45,7 +45,7 @@ with palette; rec {
   text_hint = tailwind.indigo-300;
 
   text_cursor = tailwind.neutral-900;
-  surface_cursor = tailwind.red-600;
+  surface_cursor = tailwind.red-400;
 
   accent = tailwind.sky-200;
   accent_dark = tailwind.sky-300;
