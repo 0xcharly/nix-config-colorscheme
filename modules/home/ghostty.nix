@@ -9,7 +9,7 @@ in {
         foreground = theme.text;
         selection-background = theme.surface_visual;
         selection-foreground = theme.on_surface_visual;
-        cursor-color = theme.text;
+        cursor-color = theme.surface_cursor;
         palette = map (
           index: "${toString index}=${theme."terminal_color_${toString index}"}"
         ) (lib.lists.range 0 15);
