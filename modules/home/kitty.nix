@@ -19,7 +19,7 @@ in {
 
         # 16 terminal colors
       ''
-      + lib.concatStringsSep "\n" (builtins.map (
+      + lib.concatStringsSep "\n" (map (
         index: "color${toString index} ${theme."terminal_color_${toString index}"}"
       ) (lib.lists.range 0 15));
   in ''
