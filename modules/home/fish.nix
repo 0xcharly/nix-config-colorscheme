@@ -52,7 +52,7 @@ in
     # fish_pager_color_secondary_description #description of every second unselected completion
   '';
 
-  programs.fish.shellInit = ''
+  programs.fish.interactiveShellInit = ''
     fish_config theme choose ${theme_name}
   '';
 }
