@@ -17,7 +17,7 @@ in
         selection_background ${theme.surface_visual}
         selection_foreground ${theme.on_surface_visual}
         cursor ${theme.surface_cursor}
-        cursor_text_color ${theme.text_cursor}
+        cursor_text_color ${theme.on_surface_cursor}
         url_color ${theme.text_link}
 
         # 16 terminal colors
