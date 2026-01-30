@@ -28,7 +28,7 @@ in {
     fish_color_cwd ${theme.text_green} # the current working directory in the default prompt
     fish_color_cwd_root ${theme.text_amber} # the current working directory in the default prompt for the root user
     fish_color_user ${theme.text_teal} # the username in the default prompt
-    fish_color_host ${theme.text_dim} # the hostname in the default prompt
+    fish_color_host ${theme.text_dimmer} # the hostname in the default prompt
     fish_color_host_remote ${theme.text_sky} # the hostname in the default prompt for remote sessions (like ssh)
     fish_color_status ${theme.text_red} # the last command’s nonzero exit code in the default prompt
     fish_color_cancel ${theme.text_amber} # the ‘^C’ indicator on a canceled command
