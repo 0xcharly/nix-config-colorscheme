@@ -20,7 +20,7 @@ in
     fish_color_end ${theme.text_dimmer} # process separators like ; and &
     fish_color_error ${theme.text_red} # syntax errors
     fish_color_param ${theme.text} # ordinary command parameters
-    fish_color_valid_path ${theme.text} -- underline-color=${theme.green} # parameters and redirection targets that are filenames (if the file exists)
+    fish_color_valid_path ${theme.text} -- underline-color=${theme.text_green} # parameters and redirection targets that are filenames (if the file exists)
     fish_color_option ${theme.text} # options starting with “-”, up to the first “--” parameter
     fish_color_comment ${theme.text_comment} --italics # comments like ‘# important’
     fish_color_selection ${theme.on_surface_visual} --background=${theme.surface_visual} # selected text in vi visual mode
