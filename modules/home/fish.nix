@@ -32,7 +32,7 @@ in
     fish_color_user ${theme.text_teal} # the username in the default prompt
     fish_color_host ${theme.text_dimmer} # the hostname in the default prompt
     fish_color_host_remote ${theme.text_sky} # the hostname in the default prompt for remote sessions (like ssh)
-    fish_color_status ${theme.text_red} # the last command’s nonzero exit code in the default prompt
+    fish_color_status ${theme.text_red} --bold # the last command’s nonzero exit code in the default prompt
     fish_color_cancel ${theme.text_amber} # the ‘^C’ indicator on a canceled command
     fish_color_search_match ${theme.on_surface_search} --background=${theme.surface_search} # history search matches and selected pager items (background only)
     fish_color_history_current ${theme.on_surface_visual} --background=${theme.surface_visual} # the current position in the history for commands like dirh and cdh
