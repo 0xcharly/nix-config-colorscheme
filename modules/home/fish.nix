@@ -27,8 +27,8 @@ in
     fish_color_operator ${theme.text_dimmer} # parameter expansion operators like * and ~
     fish_color_escape ${theme.text_teal} # character escapes like \n and \x70
     fish_color_autosuggestion ${theme.text_variant_dimmer} # autosuggestions (the proposed rest of a command)
-    fish_color_cwd ${theme.text_green} # the current working directory in the default prompt
-    fish_color_cwd_root ${theme.text_amber} # the current working directory in the default prompt for the root user
+    fish_color_cwd ${theme.text_green} --italics # the current working directory in the default prompt
+    fish_color_cwd_root ${theme.text_amber} --italics # the current working directory in the default prompt for the root user
     fish_color_user ${theme.text_teal} # the username in the default prompt
     fish_color_host ${theme.text_dimmer} # the hostname in the default prompt
     fish_color_host_remote ${theme.text_sky} # the hostname in the default prompt for remote sessions (like ssh)
