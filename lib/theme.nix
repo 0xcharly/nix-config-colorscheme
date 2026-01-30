@@ -1,8 +1,7 @@
 # Palette inspired by https://github.com/catppuccin/catppuccin
 # MIT License: Copyright (c) 2021 Catppuccin
 
-palette:
-with palette; rec {
+palette: with palette; rec {
   text = tailwind.slate-300;
   text_dim = tailwind.slate-400;
   text_dimmer = tailwind.slate-500;

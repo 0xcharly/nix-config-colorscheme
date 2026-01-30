@@ -5,12 +5,12 @@
   ...
 }:
 with pkgs;
-  (vimUtils.buildVimPlugin
-    {
-      inherit pname;
-      version = "0.0.1-${flake.rev or flake.dirtyRev}";
-      src = ./.;
-    }).overrideAttrs {
+(vimUtils.buildVimPlugin {
+  inherit pname;
+  version = "0.0.1-${flake.rev or flake.dirtyRev}";
+  src = ./.;
+}).overrideAttrs
+  {
     colorscheme = pkgs.writeText "colorscheme.lua" (
       import ./colorscheme.lua.nix flake.lib.colorscheme.asHexLiterals
     );

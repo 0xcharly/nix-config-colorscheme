@@ -1,7 +1,10 @@
-{flake, ...}: {lib, ...}: let
+{ flake, ... }:
+{ lib, ... }:
+let
   theme_name = "pixel";
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   programs.ghostty = {
     themes = {
       ${theme_name} = {
@@ -10,9 +13,9 @@ in {
         selection-background = theme.surface_visual;
         selection-foreground = theme.on_surface_visual;
         cursor-color = theme.surface_cursor;
-        palette = map (
-          index: "${toString index}=${theme."terminal_color_${toString index}"}"
-        ) (lib.lists.range 0 15);
+        palette = map (index: "${toString index}=${theme."terminal_color_${toString index}"}") (
+          lib.lists.range 0 15
+        );
       };
     };
     settings.theme = theme_name;

@@ -1,6 +1,8 @@
-{flake, ...}: let
+{ flake, ... }:
+let
   theme = flake.lib.colorscheme.asRgbLiterals;
-in {
+in
+{
   wayland.windowManager.hyprland = {
     settings = {
       general = {

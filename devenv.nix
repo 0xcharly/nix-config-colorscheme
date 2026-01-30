@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   packages = with pkgs; [
     nixfmt
     stylua
@@ -17,32 +18,35 @@
     };
   };
 
-  enterShell = let
-    pkgs' = import inputs.nixpkgs {
-      inherit (pkgs.stdenv.hostPlatform) system;
-      overlays = [inputs.gen-luarc.overlays.default];
-    };
-    luarc-json = pkgs'.mk-luarc-json {
-      plugins = [];
-      nvim = pkgs.neovim-unwrapped;
-    };
-  in ''
-    ln -fs ${luarc-json} .luarc.json
-  '';
-
-  scripts.fmt.exec = let
-    fmt-opts = {
-      projectRootFile = "flake.lock";
-      programs = {
-        deadnix.enable = true;
-        nixfmt.enable = true;
-        prettier.enable = true;
-        shfmt.enable = false;
-        stylua.enable = true;
-        taplo.enable = true;
+  enterShell =
+    let
+      pkgs' = import inputs.nixpkgs {
+        inherit (pkgs.stdenv.hostPlatform) system;
+        overlays = [ inputs.gen-luarc.overlays.default ];
       };
-    };
-    fmt = inputs.treefmt-nix.lib.mkWrapper pkgs fmt-opts;
-  in
+      luarc-json = pkgs'.mk-luarc-json {
+        plugins = [ ];
+        nvim = pkgs.neovim-unwrapped;
+      };
+    in
+    ''
+      ln -fs ${luarc-json} .luarc.json
+    '';
+
+  scripts.fmt.exec =
+    let
+      fmt-opts = {
+        projectRootFile = "flake.lock";
+        programs = {
+          deadnix.enable = true;
+          nixfmt.enable = true;
+          prettier.enable = true;
+          shfmt.enable = false;
+          stylua.enable = true;
+          taplo.enable = true;
+        };
+      };
+      fmt = inputs.treefmt-nix.lib.mkWrapper pkgs fmt-opts;
+    in
     lib.getExe fmt;
 }

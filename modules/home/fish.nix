@@ -1,10 +1,12 @@
 # Theme inspired from https://github.com/catppuccin/fish
 # MIT License: Copyright (c) 2021 Catppuccin
 
-{flake, ...}: let
+{ flake, ... }:
+let
   theme_name = "pixel";
   theme = flake.lib.colorscheme.noPrefix;
-in {
+in
+{
   xdg.configFile."fish/themes/${theme_name}.theme".text = ''
     # name: '${theme_name}'
     # url: 'https://github.com/0xcharly/nix-config-colorscheme'

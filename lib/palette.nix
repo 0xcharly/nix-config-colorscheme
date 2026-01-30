@@ -2,8 +2,9 @@
 # MIT License: Copyright (c) Tailwind Labs, Inc.
 
 let
-  _ = l: c: h: {inherit l c h;};
-in {
+  _ = l: c: h: { inherit l c h; };
+in
+{
   tailwind = {
     red-50 = _ 0.971 0.013 17.38;
     red-100 = _ 0.936 0.032 17.717;

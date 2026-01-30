@@ -1,6 +1,8 @@
-{flake, ...}: let
+{ flake, ... }:
+let
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   services.walker.theme = {
     name = "pixel";
     layout = fromTOML (builtins.readFile ./walker-layout.toml);

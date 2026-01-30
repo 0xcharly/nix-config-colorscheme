@@ -1,20 +1,36 @@
 # Theme inspired from https://github.com/catppuccin/bottom
 # MIT License: Copyright (c) 2021 Catppuccin
 
-{flake, ...}: let
+{ flake, ... }:
+let
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   programs.bottom.settings = with theme; {
     "styles.cpu" = {
       all_entry_color = text_rose;
       avg_entry_color = text_pink;
-      cpu_core_colors = [text_red text_orange text_amber text_green text_blue text_violet];
+      cpu_core_colors = [
+        text_red
+        text_orange
+        text_amber
+        text_green
+        text_blue
+        text_violet
+      ];
     };
     "styles.memory" = {
       ram_color = text_green;
       cache_color = text_red;
       swap_color = text_orange;
-      gpu_colors = [text_blue text_violet text_red text_orange text_amber text_green];
+      gpu_colors = [
+        text_blue
+        text_violet
+        text_red
+        text_orange
+        text_amber
+        text_green
+      ];
       arc_color = text_cyan;
     };
     "styles.network" = {

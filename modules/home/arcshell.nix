@@ -1,6 +1,8 @@
-{flake, ...}: let
+{ flake, ... }:
+let
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   programs.arcshell.settings.palette = {
     text = theme.text_variant_dim;
     surface = theme.surface;

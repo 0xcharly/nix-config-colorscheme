@@ -1,9 +1,11 @@
 # Theme inspired from https://github.com/catppuccin/fzf
 # MIT License: Copyright (c) 2022 Catppuccin
 
-{flake, ...}: let
+{ flake, ... }:
+let
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   programs.fzf.colors = {
     "bg+" = theme.surface_cursorline;
     "fg+" = theme.text_title;

@@ -1,7 +1,8 @@
-{flake, ...}: {lib, ...}: let
+{ flake, ... }:
+{ lib, ... }:
+let
   theme = flake.lib.colorscheme.noPrefix;
-in {
-  console.colors = map (
-    index: theme."terminal_color_${toString index}"
-  ) (lib.lists.range 0 15);
+in
+{
+  console.colors = map (index: theme."terminal_color_${toString index}") (lib.lists.range 0 15);
 }

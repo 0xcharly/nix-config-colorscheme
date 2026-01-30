@@ -1,9 +1,11 @@
 # Theme inspired from https://github.com/catppuccin/mako
 # MIT License: Copyright (c) 2021 Catppuccin
 
-{flake, ...}: let
+{ flake, ... }:
+let
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   config.services.mako.settings = {
     background-color = theme.surface;
     text-color = theme.text;

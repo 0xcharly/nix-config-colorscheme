@@ -1,6 +1,9 @@
-{flake, ...}: {lib, ...}: let
+{ flake, ... }:
+{ lib, ... }:
+let
   theme = flake.lib.colorscheme.asHexStrings;
-in {
+in
+{
   programs.tmux.extraConfig = lib.mkBefore ''
     set -ogq @text "${theme.text}"
     set -ogq @text_session_name "${theme.text_variant_dim}"
