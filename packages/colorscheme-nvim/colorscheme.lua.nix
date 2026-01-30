@@ -47,7 +47,7 @@ load_colorscheme {
 
   ColorColumn = { bg = ${theme.surface_amber} }, -- used for the columns set with 'colorcolumn'
   Conceal = { fg = ${theme.text_variant_conceal} }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-  Cursor = { fg = ${theme.text_cursor}, bg = ${theme.surface_cursor}, reverse = true }, -- character under the cursor
+  Cursor = { fg = ${theme.on_surface_cursor}, bg = ${theme.surface_cursor}, reverse = true }, -- character under the cursor
   lCursor = { link = 'Cursor' }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
   CursorIM = { link = 'Cursor' }, -- like Cursor, but used when in IME mode |CursorIM|
   CursorColumn = { link = 'CursorLine' },

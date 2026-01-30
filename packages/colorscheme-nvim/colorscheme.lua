@@ -304,9 +304,6 @@ T = {
   text_info = P['blue-300'],
   text_hint = P['indigo-300'],
 
-  text_cursor = P['neutral-900'],
-  surface_cursor = P['red-600'],
-
   borders = P['slate-500'],
 
   surface_dark = P['neutral-950'],
@@ -318,6 +315,9 @@ T = {
 
   surface_scrollbar = 0x121212,
   surface_scrollbar_thumb = P['neutral-800'],
+
+  surface_cursor = P['red-600'],
+  on_surface_cursor = P['neutral-900'],
 
   surface_visual = P['blue-800'],
   on_surface_visual = P['blue-50'],
@@ -380,7 +380,7 @@ generate_colorscheme {
 
   ColorColumn = { bg = T.surface_amber }, -- used for the columns set with 'colorcolumn'
   Conceal = { fg = T.text_variant_conceal }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-  Cursor = { fg = T.text_cursor, bg = T.surface_cursor, reverse = true }, -- character under the cursor
+  Cursor = { fg = T.on_surface_cursor, bg = T.surface_cursor, reverse = true }, -- character under the cursor
   lCursor = { link = 'Cursor' }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
   CursorIM = { link = 'Cursor' }, -- like Cursor, but used when in IME mode |CursorIM|
   CursorColumn = { link = 'CursorLine' },

@@ -44,9 +44,6 @@ with palette; rec {
   text_info = tailwind.blue-300;
   text_hint = tailwind.indigo-300;
 
-  text_cursor = tailwind.neutral-900;
-  surface_cursor = tailwind.red-400;
-
   accent = tailwind.sky-200;
   accent_dark = tailwind.sky-300;
   accent_darker = tailwind.sky-400;
@@ -80,6 +77,9 @@ with palette; rec {
 
   surface_scrollbar = blends.surface_lighter;
   surface_scrollbar_thumb = tailwind.neutral-800;
+
+  surface_cursor = tailwind.red-400;
+  on_surface_cursor = tailwind.neutral-900;
 
   surface_visual = tailwind.blue-800;
   on_surface_visual = tailwind.blue-50;
