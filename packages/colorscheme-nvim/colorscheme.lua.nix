@@ -61,8 +61,8 @@ theme: ''
     SignColumn = { fg = ${theme.text_variant_dim} }, -- column where |signs| are displayed
     SignColumnSB = { fg = ${theme.text_variant_dim}, bg = ${theme.surface} }, -- column where |signs| are displayed
     Substitute = { fg = ${theme.on_surface_green}, bg = ${theme.surface_green} }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = ${theme.text_variant_dimmer} }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = ${theme.text_pink} }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+    LineNr = { fg = ${theme.text_variant_dimmest} }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = ${theme.text_yellow} }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { fg = ${theme.UNUSED}, bg = ${theme.UNUSED} }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = ${theme.text} }, -- 'showmode' message (e.g., "-- INSERT -- ")
     -- MsgArea = { fg = ${theme.UNUSED} }, -- Area for messages and cmdline, don't set this highlight because of https://github.com/neovim/neovim/issues/17832
@@ -98,7 +98,7 @@ theme: ''
     SpellCap = { sp = ${theme.text_yellow}, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = ${theme.text_blue}, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = ${theme.text_green}, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { fg = ${theme.text_dim}, bg = ${theme.surface_statusline} }, -- status line of current window
+    StatusLine = { fg = ${theme.on_surface_statusline}, bg = ${theme.surface_statusline} }, -- status line of current window
     StatusLineNC = { link = 'StatusLine' }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = ${theme.text_dimmer}, bg = ${theme.surface} }, -- tab pages line, not active tab page label
     TabLineFill = { link = 'TabLine' }, -- tab pages line, where there are no labels
@@ -457,11 +457,11 @@ theme: ''
     -- }}}
     -- StatusLine {{{
 
-    StatusLineFocusedPrimary = { fg = ${theme.text}, bold = true },
-    StatusLineFocusedSecondary = { fg = ${theme.text_dim} },
+    StatusLineFocusedPrimary = { fg = ${theme.on_surface_statusline_accent}, bold = true },
+    StatusLineFocusedSecondary = { fg = ${theme.on_surface_status_dimmer} },
 
-    StatusLineUnfocusedPrimary = { fg = ${theme.text_dim}, bold = true },
-    StatusLineUnfocusedSecondary = { fg = ${theme.text_dim} },
+    StatusLineUnfocusedPrimary = { fg = ${theme.on_surface_statusline_dimmer}, bold = true },
+    StatusLineUnfocusedSecondary = { fg = ${theme.on_surface_statusline_dimmer} },
 
     -- }}}
     -- Cmp {{{

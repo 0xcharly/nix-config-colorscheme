@@ -70,9 +70,15 @@ palette: with palette; rec {
   surface_dark = tailwind.neutral-950;
   surface = tailwind.neutral-900;
   surface_cursorline = tailwind.neutral-800;
-  surface_statusline = blends.surface_lighter;
   surface_menu = tailwind.stone-900;
   surface_menu_cursorline = tailwind.stone-800;
+
+  surface_statusline = tailwind.stone-300;
+  on_surface_statusline = tailwind.slate-900;
+  on_surface_statusline_accent = tailwind.blue-600;
+  on_surface_statusline_dim = tailwind.slate-800;
+  on_surface_statusline_dimmer = tailwind.slate-700;
+  on_surface_statusline_dimmest = tailwind.slate-600;
 
   surface_scrollbar = blends.surface_lighter;
   surface_scrollbar_thumb = tailwind.neutral-800;

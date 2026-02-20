@@ -309,7 +309,6 @@ T = {
   surface_dark = P['neutral-950'],
   surface = P['neutral-900'],
   surface_cursorline = P['neutral-800'],
-  surface_statusline = 0x121212,
   surface_menu = P['stone-900'],
   surface_menu_cursorline = P['stone-800'],
 
@@ -321,6 +320,13 @@ T = {
 
   surface_visual = P['blue-800'],
   on_surface_visual = P['blue-50'],
+
+  surface_statusline = P['stone-300'],
+  on_surface_statusline = P['slate-900'],
+  on_surface_statusline_accent = P['blue-600'],
+  on_surface_statusline_dim = P['slate-800'],
+  on_surface_statusline_dimmer = P['slate-700'],
+  on_surface_statusline_dimmest = P['slate-600'],
 
   -- Same as `surface_amber`/`on_surface_amber`
   surface_search = 0x343121, -- surface + amber-300/15
@@ -394,8 +400,8 @@ generate_colorscheme {
   SignColumn = { fg = T.text_variant_dim }, -- column where |signs| are displayed
   SignColumnSB = { fg = T.text_variant_dim, bg = T.surface }, -- column where |signs| are displayed
   Substitute = { fg = T.on_surface_green, bg = T.surface_green }, -- |:substitute| replacement text highlighting
-  LineNr = { fg = T.text_variant_dimmer }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-  CursorLineNr = { fg = T.text_pink }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+  LineNr = { fg = T.text_variant_conceal }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+  CursorLineNr = { fg = T.text_yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
   MatchParen = { fg = T.UNUSED, bg = T.UNUSED }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
   ModeMsg = { fg = T.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
   -- MsgArea = { fg = T.UNUSED }, -- Area for messages and cmdline, don't set this highlight because of https://github.com/neovim/neovim/issues/17832
@@ -431,7 +437,7 @@ generate_colorscheme {
   SpellCap = { sp = T.text_yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
   SpellLocal = { sp = T.text_blue, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
   SpellRare = { sp = T.text_green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-  StatusLine = { fg = T.text_dim, bg = T.surface_statusline }, -- status line of current window
+  StatusLine = { fg = T.on_surface_statusline, bg = T.surface_statusline }, -- status line of current window
   StatusLineNC = { link = 'StatusLine' }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
   TabLine = { fg = T.text_dimmer, bg = T.surface }, -- tab pages line, not active tab page label
   TabLineFill = { link = 'TabLine' }, -- tab pages line, where there are no labels
@@ -790,11 +796,11 @@ generate_colorscheme {
   -- }}}
   -- StatusLine {{{
 
-  StatusLineFocusedPrimary = { fg = T.text, bold = true },
-  StatusLineFocusedSecondary = { fg = T.text_dim },
+  StatusLineFocusedPrimary = { fg = T.on_surface_statusline_accent, bold = true },
+  StatusLineFocusedSecondary = { fg = T.on_surface_statusline_dimmer },
 
-  StatusLineUnfocusedPrimary = { fg = T.text_dim, bold = true },
-  StatusLineUnfocusedSecondary = { fg = T.text_dim },
+  StatusLineUnfocusedPrimary = { fg = T.on_surface_statusline_dimmer, bold = true },
+  StatusLineUnfocusedSecondary = { fg = T.on_surface_statusline_dimmer },
 
   -- }}}
   -- Cmp {{{
