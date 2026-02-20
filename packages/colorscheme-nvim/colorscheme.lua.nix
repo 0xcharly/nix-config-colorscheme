@@ -458,7 +458,7 @@ theme: ''
     -- StatusLine {{{
 
     StatusLineFocusedPrimary = { fg = ${theme.on_surface_statusline_accent}, bold = true },
-    StatusLineFocusedSecondary = { fg = ${theme.on_surface_status_dimmer} },
+    StatusLineFocusedSecondary = { fg = ${theme.on_surface_statusline_dimmer} },
 
     StatusLineUnfocusedPrimary = { fg = ${theme.on_surface_statusline_dimmer}, bold = true },
     StatusLineUnfocusedSecondary = { fg = ${theme.on_surface_statusline_dimmer} },
