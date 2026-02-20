@@ -323,7 +323,6 @@ T = {
 
   surface_statusline = P['stone-300'],
   on_surface_statusline = P['slate-900'],
-  on_surface_statusline_accent = P['blue-600'],
   on_surface_statusline_dim = P['slate-800'],
   on_surface_statusline_dimmer = P['slate-700'],
   on_surface_statusline_dimmest = P['slate-600'],
@@ -796,7 +795,7 @@ generate_colorscheme {
   -- }}}
   -- StatusLine {{{
 
-  StatusLineFocusedPrimary = { fg = T.on_surface_statusline_accent, bold = true },
+  StatusLineFocusedPrimary = { fg = T.on_surface_statusline, bold = true },
   StatusLineFocusedSecondary = { fg = T.on_surface_statusline_dimmer },
 
   StatusLineUnfocusedPrimary = { fg = T.on_surface_statusline_dimmer, bold = true },

@@ -75,7 +75,6 @@ palette: with palette; rec {
 
   surface_statusline = tailwind.stone-300;
   on_surface_statusline = tailwind.slate-900;
-  on_surface_statusline_accent = tailwind.blue-600;
   on_surface_statusline_dim = tailwind.slate-800;
   on_surface_statusline_dimmer = tailwind.slate-700;
   on_surface_statusline_dimmest = tailwind.slate-600;
