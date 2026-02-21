@@ -2,11 +2,11 @@
 # MIT License: Copyright (c) 2021 Catppuccin
 
 palette: with palette; rec {
-  text = tailwind.slate-300;
-  text_dim = tailwind.slate-400;
-  text_dimmer = tailwind.slate-500;
-  text_dimmest = tailwind.slate-600;
-  text_conceal = tailwind.slate-700;
+  text = tailwind.zinc-300;
+  text_dim = tailwind.zinc-400;
+  text_dimmer = tailwind.zinc-500;
+  text_dimmest = tailwind.zinc-600;
+  text_conceal = tailwind.zinc-700;
 
   text_variant = tailwind.gray-300;
   text_variant_dim = tailwind.gray-400;

@@ -307,11 +307,11 @@ local P = {
 -- Theme {{{
 
 T = {
-  text = P['slate-300'],
-  text_dim = P['slate-400'],
-  text_dimmer = P['slate-500'],
-  text_dimmest = P['slate-600'],
-  text_conceal = P['slate-700'],
+  text = P['zinc-300'],
+  text_dim = P['zinc-400'],
+  text_dimmer = P['zinc-500'],
+  text_dimmest = P['zinc-600'],
+  text_conceal = P['zinc-700'],
 
   text_variant = P['gray-300'],
   text_variant_dim = P['gray-400'],
