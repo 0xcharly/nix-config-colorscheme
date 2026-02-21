@@ -33,20 +33,24 @@
       ln -fs ${luarc-json} .luarc.json
     '';
 
-  scripts.fmt.exec =
-    let
-      fmt-opts = {
-        projectRootFile = "flake.lock";
-        programs = {
-          deadnix.enable = true;
-          nixfmt.enable = true;
-          prettier.enable = true;
-          shfmt.enable = false;
-          stylua.enable = true;
-          taplo.enable = true;
+  scripts = {
+    fmt.exec =
+      let
+        fmt-opts = {
+          projectRootFile = "flake.lock";
+          programs = {
+            deadnix.enable = true;
+            nixfmt.enable = true;
+            prettier.enable = true;
+            shfmt.enable = false;
+            stylua.enable = true;
+            taplo.enable = true;
+          };
         };
-      };
-      fmt = inputs.treefmt-nix.lib.mkWrapper pkgs fmt-opts;
-    in
-    lib.getExe fmt;
+        fmt = inputs.treefmt-nix.lib.mkWrapper pkgs fmt-opts;
+      in
+      lib.getExe fmt;
+
+    gen-lua-palette.exec = "nix eval --raw --file gen-lua-palette.nix";
+  };
 }
