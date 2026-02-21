@@ -348,6 +348,9 @@ T = {
   text_info = P['blue-300'],
   text_hint = P['indigo-300'],
 
+  text_lineno = P['zinc-700'],
+  text_lineno_cursor = P['zinc-400'],
+
   borders = P['slate-500'],
 
   surface_dark = P['neutral-950'],
@@ -443,8 +446,8 @@ generate_colorscheme {
   SignColumn = { fg = T.text_variant_dim }, -- column where |signs| are displayed
   SignColumnSB = { fg = T.text_variant_dim, bg = T.surface }, -- column where |signs| are displayed
   Substitute = { fg = T.on_surface_green, bg = T.surface_green }, -- |:substitute| replacement text highlighting
-  LineNr = { fg = T.text_variant_conceal }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-  CursorLineNr = { fg = T.text_yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+  LineNr = { fg = T.text_lineno }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+  CursorLineNr = { fg = T.text_lineno_cursor }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
   MatchParen = { fg = T.UNUSED, bg = T.UNUSED }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
   ModeMsg = { fg = T.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
   -- MsgArea = { fg = T.UNUSED }, -- Area for messages and cmdline, don't set this highlight because of https://github.com/neovim/neovim/issues/17832

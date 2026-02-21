@@ -43,6 +43,9 @@ palette: with palette; rec {
   text_info = tailwind.blue-300;
   text_hint = tailwind.indigo-300;
 
+  text_lineno = tailwind.zinc-700;
+  text_lineno_cursor = tailwind.zinc-400;
+
   accent = tailwind.sky-200;
   accent_dark = tailwind.sky-300;
   accent_darker = tailwind.sky-400;

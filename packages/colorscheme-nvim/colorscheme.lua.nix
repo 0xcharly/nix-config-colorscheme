@@ -61,8 +61,8 @@ theme: ''
     SignColumn = { fg = ${theme.text_variant_dim} }, -- column where |signs| are displayed
     SignColumnSB = { fg = ${theme.text_variant_dim}, bg = ${theme.surface} }, -- column where |signs| are displayed
     Substitute = { fg = ${theme.on_surface_green}, bg = ${theme.surface_green} }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = ${theme.text_variant_dimmest} }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = ${theme.text_yellow} }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+    LineNr = { fg = ${theme.text_lineno} }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = ${theme.text_lineno_cursor} }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { fg = ${theme.UNUSED}, bg = ${theme.UNUSED} }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = ${theme.text} }, -- 'showmode' message (e.g., "-- INSERT -- ")
     -- MsgArea = { fg = ${theme.UNUSED} }, -- Area for messages and cmdline, don't set this highlight because of https://github.com/neovim/neovim/issues/17832
