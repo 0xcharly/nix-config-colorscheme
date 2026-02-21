@@ -1,11 +1,7 @@
-lib: oklch: rgb: theme:
-let
-  mapThemeHexAttrs =
-    fn: lib.attrsets.mapAttrs (_: value: value |> oklch.convertToRgb |> rgb.toHex |> fn) theme;
-in
+converters: theme:
 {
-  asHexLiterals = mapThemeHexAttrs (value: "0x${value}");
-  asHexStrings = mapThemeHexAttrs (value: "#${value}");
-  asRgbLiterals = mapThemeHexAttrs (value: "rgb(${value})");
-  noPrefix = mapThemeHexAttrs (value: value);
+  asHexLiterals = converters.asHexLiterals theme;
+  asHexStrings = converters.asHexStrings theme;
+  asRgbLiterals = converters.asRgbLiterals theme;
+  noPrefix = converters.noPrefix theme;
 }

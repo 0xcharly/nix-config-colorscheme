@@ -4,7 +4,8 @@ let
   inherit (inputs.nix-math.lib) math;
 in
 rec {
-  colorscheme = import ./colorscheme.nix lib oklch rgb theme;
+  colorscheme = import ./colorscheme.nix converters theme;
+  converters = import ./converters.nix lib oklch rgb;
   oklch = import ./oklch.nix lib math;
   palette = import ./palette.nix;
   rgb = import ./rgb.nix lib math;
