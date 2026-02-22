@@ -77,6 +77,8 @@ palette: with palette; rec {
   surface_menu_cursorline = tailwind.stone-800;
 
   surface_statusline = tailwind.stone-300;
+  surface_statusline_dim = tailwind.stone-400;
+  surface_statusline_dimmer = tailwind.stone-500;
   on_surface_statusline = tailwind.slate-900;
   on_surface_statusline_dim = tailwind.slate-800;
   on_surface_statusline_dimmer = tailwind.slate-700;
