@@ -5,7 +5,7 @@ let
 in
 {
   programs.tmux.extraConfig = lib.mkBefore ''
-    set -ogq @text "${theme.text}"
+    set -ogq @text "${theme.on_surface_statusline}"
     set -ogq @text_session_name "${theme.on_surface_statusline}"
     set -ogq @surface "${theme.surface}"
     set -ogq @surface_statusline "${theme.surface_statusline}"
