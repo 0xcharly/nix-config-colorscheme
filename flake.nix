@@ -1,12 +1,6 @@
 {
   description = "Neovim config";
 
-  nixConfig.experimental-features = [
-    "nix-command"
-    "flakes"
-    "pipe-operators"
-  ];
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nix-math.url = "github:xddxdd/nix-math";

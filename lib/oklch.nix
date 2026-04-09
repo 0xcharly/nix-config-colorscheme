@@ -51,7 +51,7 @@ let
     in
     lib.attrsets.mapAttrs fn rgb;
 
-  convertOklchToRgb = oklch: oklch |> convertLchToLab |> convertOklabToLrgb |> convertLrgbToRgb;
+  convertOklchToRgb = oklch: convertLrgbToRgb (convertOklabToLrgb (convertLchToLab oklch));
 in
 {
   convertToRgb = convertOklchToRgb;

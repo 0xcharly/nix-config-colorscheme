@@ -7,10 +7,8 @@ let
 in
 ''
   local P = {
-    ${
-      converters.asHexLiterals palette.tailwind
-      |> lib.mapAttrsToList gen-lua-palette-entry
-      |> lib.concatStringsSep "\n  "
-    }
+    ${lib.concatStringsSep "\n  " (
+      lib.mapAttrsToList gen-lua-palette-entry (converters.asHexLiterals palette.tailwind)
+    )}
   }
 ''

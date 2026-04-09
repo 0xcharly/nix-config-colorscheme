@@ -1,8 +1,7 @@
 lib: oklch: rgb:
 let
   mapThemeHexAttrs =
-    fn: palette:
-    lib.attrsets.mapAttrs (_: value: value |> oklch.convertToRgb |> rgb.toHex |> fn) palette;
+    fn: palette: lib.attrsets.mapAttrs (_: value: fn (rgb.toHex (oklch.convertToRgb value))) palette;
 in
 {
   asHexLiterals = mapThemeHexAttrs (value: "0x${value}");

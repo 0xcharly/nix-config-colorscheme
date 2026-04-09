@@ -21,7 +21,7 @@ let
           max
         else
           value;
-      interpolate = _: t: t |> clamp 0 1 |> lerp 0 255;
+      interpolate = _: t: lerp 0 255 (clamp 0 1 t);
     in
     lib.attrsets.mapAttrs interpolate { inherit r g b; };
 
@@ -36,13 +36,13 @@ let
         if rounded < 16 then "0${lib.trivial.toHexString rounded}" else lib.trivial.toHexString rounded;
     in
     with (linearInterpolator rgb);
-    [
-      r
-      g
-      b
-    ]
-    |> builtins.map toHex
-    |> lib.concatStrings;
+    lib.concatStrings (
+      map toHex [
+        r
+        g
+        b
+      ]
+    );
 in
 {
   inherit toHex;
