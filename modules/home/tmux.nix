@@ -1,16 +1,18 @@
-{ flake, ... }:
-{ lib, ... }:
+{ self, inputs, ... }:
 let
-  theme = flake.lib.colorscheme.asHexStrings;
+  inherit (inputs.nixpkgs.lib) mkBefore;
+  theme = self.lib.colorscheme.asHexStrings;
 in
 {
-  programs.tmux.extraConfig = lib.mkBefore ''
-    set -ogq @text "${theme.on_surface_statusline}"
-    set -ogq @text_session_name "${theme.on_surface_statusline}"
-    set -ogq @surface "${theme.surface}"
-    set -ogq @surface_statusline "${theme.surface_statusline}"
-    set -ogq @indicator_current "${theme.accent_darkest}"
-    set -ogq @indicator_last "${theme.accent_dark}"
-    set -ogq @indicator_inactive "${theme.surface_statusline}"
-  '';
+  flake.homeModules.tmux = with theme; {
+    programs.tmux.extraConfig = mkBefore ''
+      set -ogq @text "${on_surface_statusline}"
+      set -ogq @text_session_name "${on_surface_statusline}"
+      set -ogq @surface "${surface}"
+      set -ogq @surface_statusline "${surface_statusline}"
+      set -ogq @indicator_current "${accent_darkest}"
+      set -ogq @indicator_last "${accent_dark}"
+      set -ogq @indicator_inactive "${surface_statusline}"
+    '';
+  };
 }

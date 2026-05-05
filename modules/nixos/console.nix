@@ -1,8 +1,10 @@
-{ flake, ... }:
-{ lib, ... }:
+{ self, inputs, ... }:
 let
-  theme = flake.lib.colorscheme.noPrefix;
+  inherit (inputs.nixpkgs.lib) lists;
+  theme = self.lib.colorscheme.noPrefix;
 in
 {
-  console.colors = map (index: theme."terminal_color_${toString index}") (lib.lists.range 0 15);
+  flake.nixosModules.console = {
+    console.colors = map (index: theme."terminal_color_${toString index}") (lists.range 0 15);
+  };
 }

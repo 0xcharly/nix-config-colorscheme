@@ -1,8 +1,13 @@
 # Implementation inspired from https://github.com/Evercoder/culori
 # MIT License: Copyright (c) 2018 Dan Burzo
 
-lib: math:
+inputs:
 let
+  inherit (inputs.nix-math.lib) math;
+  inherit (inputs.nixpkgs.lib.attrsets) mapAttrs;
+  inherit (inputs.nixpkgs.lib.strings) concatStrings;
+  inherit (inputs.nixpkgs.lib.trivial) toHexString;
+
   linearInterpolator =
     {
       r ? 0,
@@ -23,27 +28,25 @@ let
           value;
       interpolate = _: t: lerp 0 255 (clamp 0 1 t);
     in
-    lib.attrsets.mapAttrs interpolate { inherit r g b; };
+    mapAttrs interpolate { inherit r g b; };
 
-  toHex =
+  convertRgbToHex =
     rgb:
     let
-      toHex =
+      toTwoBytesHex =
         value:
         let
           rounded = math.round value;
         in
-        if rounded < 16 then "0${lib.trivial.toHexString rounded}" else lib.trivial.toHexString rounded;
+        if rounded < 16 then "0${toHexString rounded}" else toHexString rounded;
     in
     with (linearInterpolator rgb);
-    lib.concatStrings (
-      map toHex [
+    concatStrings (
+      map toTwoBytesHex [
         r
         g
         b
       ]
     );
 in
-{
-  inherit toHex;
-}
+convertRgbToHex

@@ -1,49 +1,51 @@
-{ flake, ... }:
+{ self, ... }:
 let
-  theme = flake.lib.colorscheme.asHexStrings;
+  theme = self.lib.colorscheme.asHexStrings;
 in
 {
-  wayland.windowManager.sway = {
-    config.colors = {
-      focused = {
-        border = theme.borders_active;
-        text = theme.borders_active;
-        indicator = theme.borders_active;
-        childBorder = theme.borders_active;
-        background = theme.surface_active;
+  flake.homeModules.sway = {
+    wayland.windowManager.sway = with theme; {
+      config.colors = {
+        focused = {
+          border = borders_active;
+          text = borders_active;
+          indicator = borders_active;
+          childBorder = borders_active;
+          background = surface_active;
+        };
+        focusedInactive = {
+          border = borders_focused_inactive;
+          text = borders_focused_inactive;
+          indicator = borders_focused_inactive;
+          childBorder = borders_focused_inactive;
+          background = surface_focused_inactive;
+        };
+        unfocused = {
+          border = borders_inactive;
+          text = borders_inactive;
+          indicator = borders_inactive;
+          childBorder = borders_inactive;
+          background = surface_inactive;
+        };
+        urgent = {
+          border = borders_urgent;
+          text = borders_urgent;
+          indicator = borders_urgent;
+          childBorder = borders_urgent;
+          background = surface_urgent;
+        };
+        placeholder = {
+          border = borders;
+          text = borders;
+          indicator = borders;
+          childBorder = borders;
+          background = surface_dark;
+        };
       };
-      focusedInactive = {
-        border = theme.borders_focused_inactive;
-        text = theme.borders_focused_inactive;
-        indicator = theme.borders_focused_inactive;
-        childBorder = theme.borders_focused_inactive;
-        background = theme.surface_focused_inactive;
-      };
-      unfocused = {
-        border = theme.borders_inactive;
-        text = theme.borders_inactive;
-        indicator = theme.borders_inactive;
-        childBorder = theme.borders_inactive;
-        background = theme.surface_inactive;
-      };
-      urgent = {
-        border = theme.borders_urgent;
-        text = theme.borders_urgent;
-        indicator = theme.borders_urgent;
-        childBorder = theme.borders_urgent;
-        background = theme.surface_urgent;
-      };
-      placeholder = {
-        border = theme.borders;
-        text = theme.borders;
-        indicator = theme.borders;
-        childBorder = theme.borders;
-        background = theme.surface_dark;
-      };
+      extraConfig = ''
+        shadow_color ${shadows_active}
+        shadow_inactive_color ${shadows_inactive}
+      '';
     };
-    extraConfig = ''
-      shadow_color ${theme.shadows_active}
-      shadow_inactive_color ${theme.shadows_inactive}
-    '';
   };
 }

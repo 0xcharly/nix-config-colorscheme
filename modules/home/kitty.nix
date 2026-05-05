@@ -1,34 +1,33 @@
-{ flake, ... }:
-{
-  lib,
-  pkgs,
-  ...
-}:
+{ self, inputs, ... }:
 let
-  theme = flake.lib.colorscheme.asHexStrings;
+  inherit (inputs.nixpkgs.lib) concatStringsSep lists;
+  theme = self.lib.colorscheme.asHexStrings;
 in
 {
-  programs.kitty.extraConfig =
+  flake.homeModules.kitty =
+    { pkgs, ... }:
     let
-      content = ''
-        # Basic colors
-        background ${theme.surface}
-        foreground ${theme.text}
-        selection_background ${theme.surface_visual}
-        selection_foreground ${theme.on_surface_visual}
-        cursor ${theme.surface_cursor}
-        cursor_text_color ${theme.on_surface_cursor}
-        url_color ${theme.text_link}
+      content =
+        with theme;
+        ''
+          # Basic colors
+          background ${surface}
+          foreground ${text}
+          selection_background ${surface_visual}
+          selection_foreground ${on_surface_visual}
+          cursor ${surface_cursor}
+          cursor_text_color ${on_surface_cursor}
+          url_color ${text_link}
 
-        # 16 terminal colors
-      ''
-      + lib.concatStringsSep "\n" (
-        map (index: "color${toString index} ${theme."terminal_color_${toString index}"}") (
-          lib.lists.range 0 15
-        )
-      );
+          # 16 terminal colors
+        ''
+        + concatStringsSep "\n" (
+          map (index: "color${toString index} ${"terminal_color_${toString index}"}") (lists.range 0 15)
+        );
     in
-    ''
-      include ${pkgs.writeText "pixel.conf" content}
-    '';
+    {
+      programs.kitty.extraConfig = ''
+        include ${pkgs.writeText "pixel.conf" content}
+      '';
+    };
 }

@@ -3,8 +3,11 @@
 # Implementation inspired from https://github.com/Evercoder/culori
 # MIT License: Copyright (c) 2018 Dan Burzo
 
-lib: math:
+inputs:
 let
+  inherit (inputs.nix-math.lib) math;
+  inherit (inputs.nixpkgs.lib.attrsets) mapAttrs;
+
   convertLchToLab =
     {
       l ? 0,
@@ -35,7 +38,6 @@ let
     };
 
   convertLrgbToRgb =
-    rgb:
     let
       sign = value: if value < 0 then -1 else 1;
 
@@ -49,10 +51,8 @@ let
         else
           value * 12.92;
     in
-    lib.attrsets.mapAttrs fn rgb;
+    mapAttrs fn;
 
   convertOklchToRgb = oklch: convertLrgbToRgb (convertOklabToLrgb (convertLchToLab oklch));
 in
-{
-  convertToRgb = convertOklchToRgb;
-}
+convertOklchToRgb

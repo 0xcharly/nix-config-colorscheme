@@ -1,23 +1,23 @@
-{ flake, ... }:
-{ lib, ... }:
+{ self, inputs, ... }:
 let
+  inherit (inputs.nixpkgs.lib) lists;
   theme_name = "pixel";
-  theme = flake.lib.colorscheme.asHexStrings;
+  theme = self.lib.colorscheme.asHexStrings;
 in
 {
-  programs.ghostty = {
-    themes = {
-      ${theme_name} = {
-        background = theme.surface;
-        foreground = theme.text;
-        selection-background = theme.surface_visual;
-        selection-foreground = theme.on_surface_visual;
-        cursor-color = theme.surface_cursor;
-        palette = map (index: "${toString index}=${theme."terminal_color_${toString index}"}") (
-          lib.lists.range 0 15
-        );
+  flake.homeModules.ghostty = {
+    programs.ghostty = {
+      themes = {
+        ${theme_name} = with theme; {
+          background = surface;
+          foreground = text;
+          selection-background = surface_visual;
+          selection-foreground = on_surface_visual;
+          cursor-color = surface_cursor;
+          palette = map (index: "${toString index}=${"terminal_color_${toString index}"}") (lists.range 0 15);
+        };
       };
+      settings.theme = theme_name;
     };
-    settings.theme = theme_name;
   };
 }

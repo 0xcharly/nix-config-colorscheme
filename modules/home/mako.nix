@@ -1,17 +1,19 @@
 # Theme inspired from https://github.com/catppuccin/mako
 # MIT License: Copyright (c) 2021 Catppuccin
 
-{ flake, ... }:
+{ self, ... }:
 let
-  theme = flake.lib.colorscheme.asHexStrings;
+  theme = self.lib.colorscheme.asHexStrings;
 in
 {
-  config.services.mako.settings = {
-    background-color = theme.surface;
-    text-color = theme.text;
-    border-color = theme.text_blue;
-    progress-color = theme.surface_cursorline;
+  flake.homeModules.mako = {
+    config.services.mako.settings = with theme; {
+      background-color = surface;
+      text-color = text;
+      border-color = text_blue;
+      progress-color = surface_cursorline;
 
-    "urgency=high".border-color = theme.text_red;
+      "urgency=high".border-color = text_red;
+    };
   };
 }
