@@ -22,7 +22,7 @@ in
           # 16 terminal colors
         ''
         + concatStringsSep "\n" (
-          map (index: "color${toString index} ${"terminal_color_${toString index}"}") (lists.range 0 15)
+          map (index: "color${toString index} ${theme."terminal_color_${toString index}"}") (lists.range 0 15)
         );
     in
     {
