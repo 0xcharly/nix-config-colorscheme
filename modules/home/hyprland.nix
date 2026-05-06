@@ -34,8 +34,8 @@ in
       text = ${text}
       alternate_base = ${surface_menu}
       bright_text = ${text_title}
-      accent = ${border_active}
-      accent_secondary = ${border_inactive}
+      accent = ${borders_active}
+      accent_secondary = ${borders_inactive}
       h1_size = 18
       h2_size = 16
       h3_size = 13
