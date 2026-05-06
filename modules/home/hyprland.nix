@@ -34,13 +34,13 @@ in
       text = ${text}
       alternate_base = ${surface_menu}
       bright_text = ${text_title}
-      accent = ${accent}
-      accent_secondary = ${text_violet}
-      h1_size = 20
+      accent = ${border_active}
+      accent_secondary = ${border_inactive}
+      h1_size = 18
       h2_size = 16
-      h3_size = 14
-      font_size = 13
-      small_font_size = 12
+      h3_size = 13
+      font_size = 12
+      small_font_size = 11
       rounding_large = 8
       rounding_small = 6
     '';
