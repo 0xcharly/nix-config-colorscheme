@@ -28,7 +28,7 @@ in
       fish_color_operator ${text_dimmer} # parameter expansion operators like * and ~
       fish_color_escape ${text_teal} # character escapes like \n and \x70
       fish_color_autosuggestion ${text_variant_dimmer} # autosuggestions (the proposed rest of a command)
-      fish_color_cwd ${text_dimmer} --italics # the current working directory in the default prompt
+      fish_color_cwd ${text_dim} --italics # the current working directory in the default prompt
       fish_color_cwd_root ${text_amber} --italics # the current working directory in the default prompt for the root user
       fish_color_user ${text_teal} # the username in the default prompt
       fish_color_host ${secondary_dark} # the hostname in the default prompt
