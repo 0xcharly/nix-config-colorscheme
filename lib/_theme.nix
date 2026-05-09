@@ -96,7 +96,7 @@ rec {
   surface_scrollbar = blends.surface_lighter;
   surface_scrollbar_thumb = tailwind.neutral-800;
 
-  surface_cursor = tailwind.orange-400;
+  surface_cursor = tailwind.amber-400;
   on_surface_cursor = tailwind.neutral-900;
 
   surface_visual = tailwind.blue-800;
