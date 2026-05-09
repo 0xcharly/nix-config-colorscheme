@@ -50,15 +50,15 @@ rec {
   text_lineno = tailwind.zinc-700;
   text_lineno_cursor = tailwind.zinc-400;
 
-  accent = tailwind.sky-200;
-  accent_dark = tailwind.sky-300;
-  accent_darker = tailwind.sky-400;
-  accent_darkest = tailwind.sky-500;
+  accent = tailwind.violet-200;
+  accent_dark = tailwind.violet-300;
+  accent_darker = tailwind.violet-400;
+  accent_darkest = tailwind.violet-500;
 
-  secondary = tailwind.violet-200;
-  secondary_dark = tailwind.violet-300;
-  secondary_darker = tailwind.violet-400;
-  secondary_darkest = tailwind.violet-500;
+  accent_secondary = tailwind.sky-200;
+  accent_secondary_dark = tailwind.sky-300;
+  accent_secondary_darker = tailwind.sky-400;
+  accent_secondary_darkest = tailwind.sky-500;
 
   borders = tailwind.slate-500;
   borders_active = tailwind.amber-400;
@@ -85,13 +85,13 @@ rec {
   surface_menu = tailwind.stone-900;
   surface_menu_cursorline = tailwind.stone-800;
 
-  surface_statusline = tailwind.stone-300;
-  surface_statusline_dim = tailwind.stone-400;
-  surface_statusline_dimmer = tailwind.stone-500;
-  on_surface_statusline = tailwind.slate-900;
-  on_surface_statusline_dim = tailwind.slate-800;
-  on_surface_statusline_dimmer = tailwind.slate-700;
-  on_surface_statusline_dimmest = tailwind.slate-600;
+  surface_statusline = tailwind.zinc-800;
+  surface_statusline_dim = tailwind.zinc-700;
+  surface_statusline_dimmer = tailwind.zinc-600;
+  on_surface_statusline = tailwind.zinc-300;
+  on_surface_statusline_dim = tailwind.zinc-400;
+  on_surface_statusline_dimmer = tailwind.zinc-500;
+  on_surface_statusline_dimmest = tailwind.zinc-600;
 
   surface_scrollbar = blends.surface_lighter;
   surface_scrollbar_thumb = tailwind.neutral-800;

@@ -10,8 +10,8 @@ in
       set -ogq @text_session_name "${on_surface_statusline}"
       set -ogq @surface "${surface}"
       set -ogq @surface_statusline "${surface_statusline}"
-      set -ogq @indicator_current "${accent_darkest}"
-      set -ogq @indicator_last "${accent_dark}"
+      set -ogq @indicator_current "${accent_dark}"
+      set -ogq @indicator_last "${accent_secondary_dark}"
       set -ogq @indicator_inactive "${surface_statusline}"
     '';
   };

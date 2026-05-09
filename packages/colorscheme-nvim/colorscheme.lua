@@ -368,11 +368,13 @@ T = {
   surface_visual = P['blue-800'],
   on_surface_visual = P['blue-50'],
 
-  surface_statusline = P['stone-300'],
-  on_surface_statusline = P['slate-900'],
-  on_surface_statusline_dim = P['slate-800'],
-  on_surface_statusline_dimmer = P['slate-700'],
-  on_surface_statusline_dimmest = P['slate-600'],
+  surface_statusline = P['zinc-800'],
+  surface_statusline_dim = P['zinc-700'],
+  surface_statusline_dimmer = P['zinc-600'],
+  on_surface_statusline = P['zinc-300'],
+  on_surface_statusline_dim = P['zinc-400'],
+  on_surface_statusline_dimmer = P['zinc-500'],
+  on_surface_statusline_dimmest = P['zinc-600'],
 
   -- Same as `surface_amber`/`on_surface_amber`
   surface_search = 0x343121, -- surface + amber-300/15
@@ -843,9 +845,9 @@ generate_colorscheme {
   -- StatusLine {{{
 
   StatusLineFocusedPrimary = { fg = T.on_surface_statusline, bold = true },
-  StatusLineFocusedSecondary = { fg = T.on_surface_statusline_dimmer },
+  StatusLineFocusedSecondary = { fg = T.on_surface_statusline_dim },
 
-  StatusLineUnfocusedPrimary = { fg = T.on_surface_statusline_dimmer, bold = true },
+  StatusLineUnfocusedPrimary = { fg = T.on_surface_statusline_dim, bold = true },
   StatusLineUnfocusedSecondary = { fg = T.on_surface_statusline_dimmer },
 
   -- }}}
