@@ -14,7 +14,7 @@ in
       # preferred_background: ${surface}
 
       fish_color_normal ${text} # default color
-      fish_color_command ${text_function} # commands like echo
+      fish_color_command ${text_variant} --bold # commands like echo
       fish_color_keyword ${text_variant} --bold # keywords like if - this falls back on the command color if unset
       fish_color_quote ${text_green} # quoted text like "abc"
       fish_color_redirection ${text_pink} # IO redirections like >/dev/null
@@ -31,7 +31,7 @@ in
       fish_color_cwd ${text_dimmer} --italics # the current working directory in the default prompt
       fish_color_cwd_root ${text_amber} --italics # the current working directory in the default prompt for the root user
       fish_color_user ${text_teal} # the username in the default prompt
-      fish_color_host ${text_blue} # the hostname in the default prompt
+      fish_color_host ${text_violet} # the hostname in the default prompt
       fish_color_host_remote ${text_pink} # the hostname in the default prompt for remote sessions (like ssh)
       fish_color_status ${text_red} --bold # the last command’s nonzero exit code in the default prompt
       fish_color_cancel ${text_amber} # the ‘^C’ indicator on a canceled command
