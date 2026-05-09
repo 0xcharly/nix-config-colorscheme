@@ -11,7 +11,7 @@ in
       set -ogq @surface "${surface}"
       set -ogq @surface_statusline "${surface_statusline}"
       set -ogq @indicator_current "${accent_dark}"
-      set -ogq @indicator_last "${accent_statusline_dim}"
+      set -ogq @indicator_last "${surface_statusline_dim}"
       set -ogq @indicator_inactive "${surface_statusline}"
     '';
   };
