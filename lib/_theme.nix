@@ -55,6 +55,11 @@ rec {
   accent_darker = tailwind.sky-400;
   accent_darkest = tailwind.sky-500;
 
+  secondary = tailwind.violet-200;
+  secondary_dark = tailwind.violet-300;
+  secondary_darker = tailwind.violet-400;
+  secondary_darkest = tailwind.violet-500;
+
   borders = tailwind.slate-500;
   borders_active = tailwind.amber-400;
   borders_inactive = tailwind.sky-400;
