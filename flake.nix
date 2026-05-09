@@ -7,6 +7,7 @@
       inputs.import-tree [
         ./lib
         ./modules
+        ./packages
       ]
     );
 
