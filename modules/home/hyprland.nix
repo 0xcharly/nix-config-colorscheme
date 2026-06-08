@@ -5,7 +5,7 @@ in
 {
   flake.homeModules.hyprland = {
     wayland.windowManager.hyprland = {
-      settings = with theme; {
+      settings.config = with theme; {
         general = {
           "col.active_border" = borders_active;
           "col.inactive_border" = borders_inactive;
